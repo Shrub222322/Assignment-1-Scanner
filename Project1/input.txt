@@ -1,0 +1,11 @@
+read A1
+read A2 // it really did
+/* woop */
+/*
+wow
+*/
+sum :=( A1 -33) + A2 *5.5
+write sum
+write ( A1 + A2 ) / 2
+// like damn this took forever
+sum:=(a1-33)/*what now */+a2*5.22
