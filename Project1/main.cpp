@@ -14,11 +14,11 @@ int main()
 {
 	ifstream infile;
 	ofstream outfile;
-
+	
 	vector<string> words;
 	string word;
 	char cha;
-
+	
 	infile.open("input.txt");
 
 	if (!infile)
@@ -37,7 +37,7 @@ int main()
 
 	int pos = 0;
 	while ((pos = word.find("//", pos)) != std::string::npos)
-	{
+		{
 		int end = word.find('\n', pos);
 		if (end == std::string::npos)
 			end = word.length();
@@ -48,7 +48,7 @@ int main()
 
 	pos = 0;
 	while ((pos = word.find("/*", pos)) != std::string::npos)
-	{
+			{
 		int end = word.find("*/", pos);
 		if (end == std::string::npos)
 			end = word.length();
@@ -56,10 +56,10 @@ int main()
 			end += 2;
 
 		word.replace(pos, end - pos, "");
-	}
+			}
 
 	for (int i = 0; i < word.length(); i++)
-	{
+			{
 		if (word[i] == '\n' || word[i] == '\t')
 		{
 			word[i] = ' ';
@@ -76,7 +76,7 @@ int main()
 		{
 			word.insert(i + 2, " ");
 
-		}
+			}
 
 		if (word[i] == ':' && word[i + 1] == '=')
 		{
@@ -92,22 +92,22 @@ int main()
 
 	stringstream ss(word);
 	while (ss >> word)
-	{
+		{
 		if (word == "sum"||word == "read" || word == "write" || word == ":=" || word == "+" || word == "-" || word == "*" || word == "/" || word == "(" || word == ")")
-		{
+			{
 			words.push_back(word);
-		}
+			}
 		else
-		{
+			{
 			words.push_back(word);
 		}
-	}
+			}
 	outfile.open("Output.txt");
 	for (const auto& w : words)
 	{
 		cout << w << endl;
 		outfile << w << endl;
-	}
+		}
 
 	outfile.close();
 	infile.close();
@@ -130,7 +130,8 @@ add op → + | -
 mult op → * | /
 	
 	*/
-	
+
+
 
 
 
