@@ -98,7 +98,7 @@ int main()
 	}
 
 	stringstream ss(word);
-	while (ss >> word) // i dont really need to do this tbf
+	while (ss >> word) 
 	{
 		if (word == "sum")
 			words.push_back("SUM");
@@ -122,7 +122,7 @@ int main()
 	{
 		cout << w << endl;
 		outfile << w << endl;
-		}
+	}
 
 	outfile.close();
 	infile.close();
