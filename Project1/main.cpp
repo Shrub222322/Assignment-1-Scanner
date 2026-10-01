@@ -36,10 +36,10 @@ int main()
 
 
 	int pos = 0;
-	while ((pos = word.find("//", pos)) != std::string::npos) // finding // comments and making sure they actually exist. 
+	while ((pos = word.find("//", pos)) != string::npos) // finding // comments and making sure they actually exist. 
 	{
 		int end = word.find('\n', pos);
-		if (end == std::string::npos) // if we cant find the a newline character we have to assume that it goes to the end of the file instead.
+		if (end == string::npos) // if we cant find the a newline character we have to assume that it goes to the end of the file instead.
 			end = word.length();
 
 		word.replace(pos, end - pos, ""); // getting rid of all of it
@@ -47,10 +47,10 @@ int main()
 
 
 	pos = 0;
-	while ((pos = word.find("/*", pos)) != std::string::npos) // making sure there is a multiline comment start. 
+	while ((pos = word.find("/*", pos)) != string::npos) // making sure there is a multiline comment start. 
 	{
 		int end = word.find("*/", pos); // finding the multilines ending position. 
-		if (end == std::string::npos) // if we cant find its ending, we should really of displayed an error here but for the sake of error handling we will just say it goes to the end of the file. 
+		if (end == string::npos) // if we cant find its ending, we should really of displayed an error here but for the sake of error handling we will just say it goes to the end of the file. 
 			end = word.length();
 		else
 			end += 2; // making sure we get rid of the */ characters!
