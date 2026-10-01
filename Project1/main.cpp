@@ -8,7 +8,11 @@ using namespace std;
 
 
 
-
+/*
+Did you employ the use of a generative AI tool on this assignment (Yes/No): No
+If yes, which tool:
+Link to chat conversation where you sought AI assistance:
+*/
 
 int main()
 {
@@ -120,7 +124,7 @@ int main()
 	outfile.open("Output.txt");
 	for (const auto& w : words)
 	{
-		cout << w << endl;
+		//cout << w << endl;
 		outfile << w << endl;
 	}
 

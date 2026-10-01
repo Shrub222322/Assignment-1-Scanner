@@ -7,6 +7,6 @@ wow
 sum :=( A1 -33) + A2 *5.5
 write sum
 write ( A1 + A2 ) / 2
-
+write a22+a21
 // like damn this took forever
 sum:=(a1-33)/*what now */+a2*5.22
